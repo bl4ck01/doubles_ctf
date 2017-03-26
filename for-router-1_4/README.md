@@ -8,7 +8,7 @@
 ![1](https://github.com/st1tch/doubles_ctf/blob/master/for-router-1_4/1.png)
 
 ### 2. C&C 서버 정보
-- 네이버에 접속했을 때, 다른 피싱사이트로 이동 한다고 했으니, 호스트파일 변조 등을 원인으로 생각할 수 있다.
+- 네이버에 접속했을 때, 다른 피싱사이트로 이동 한다고 했으니, dns 변조 등을 원인으로 생각할 수 있다.
 ```
 grep -rn "dns"
 ```
