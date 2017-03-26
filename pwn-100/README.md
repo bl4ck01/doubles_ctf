@@ -24,7 +24,7 @@ Start              End                Perm	Name
 ```
 bof 취약점이 있었고, bss영역에 rwxp 권한이 있었다. </br>
 따라서 첫번째 페이로드에 fake_rbp를 넣어서, rbp를 bss영역으로 바꿧고, </br>
-두번째 페이로드 공격에서 쉘코드를 올리고, init함수 부분의 가젯을 사용해서 bss 영역을 호출했다.
+두번째 페이로드에 쉘코드를 올리고 rop페이로드를 작성했다. rop는 init함수 부분의 가젯을 사용해서 bss 영역을 호출했다.
 
 ## result
 ```
