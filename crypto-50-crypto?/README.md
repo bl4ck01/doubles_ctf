@@ -18,7 +18,9 @@ for i in s:
 caesar_enc(11, out.lower())
 ```
 </br>
+
 ## Result
+
 ```
 ~/machome/ctf/doubles_ctf/crypto-50-crypto?(master*) » python solve.py                               stitch@certis
 {c0+gratz_y0u_3olve_1t}i& !"#$%&'(
