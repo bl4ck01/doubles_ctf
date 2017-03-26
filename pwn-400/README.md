@@ -108,6 +108,7 @@ dword_804C4E4 = ptr;
 * 따라서 804C4e0에 free함수의 got주소를 overwrite하고 난 뒤, modify메뉴를 이용해서 buf의 값은 system함수의 주소로, ptr의 값은 '/bin/sh\x00' 으로 수정한다. 그리고 종료를 하게 되면 free(ptr)이 호출되고, system('/bin/sh\x00') 이 호출된다.
 
 </br>
+
 ## Result
 ```
 ~/machome/ctf/doubles_ctf/pwn-400(master*) » python exploit.py k                                     stitch@certis
