@@ -5,4 +5,4 @@
 #### RANK : 5th
 
 
-![result](https://github.com/st1tch/doubles_ctf/edit/master/result.png)
+![result](https://github.com/st1tch/doubles_ctf/blob/master/result.png)
