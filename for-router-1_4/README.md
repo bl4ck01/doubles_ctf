@@ -13,13 +13,16 @@
 grep -rn "dns"
 ```
 명령어를 통해 C&C 서버의 주소를 알아낼 수 있었다.
+
 ![2](https://github.com/st1tch/doubles_ctf/blob/master/for-router-1_4/2.png)
 
 ### 3. 수상한 포트 조사
 - 수상한 포트가 열려 있다고 해서, 서비스를 조사 해 보았다.
 **/default/etc/services** 경로를 보면 수상한 포트에 서비스가 등록되어 있다.
+
 ![3](https://github.com/st1tch/doubles_ctf/blob/master/for-router-1_4/3.png)
 
 ### 4. 수상한 페이지 원인 분석
 - 펌웨어의 버전이 9.984인 것을 알기 때문에, iptime홈페이지에서 원본 펌웨어를 다운받았다. 그리고 디핑을 통해 **/home/httpd/js/wirelesswizard.js** 에 숨겨진 플래그가 있는 것을 확인하였다.
+
 ![4](https://github.com/st1tch/doubles_ctf/blob/master/for-router-1_4/4.png)
