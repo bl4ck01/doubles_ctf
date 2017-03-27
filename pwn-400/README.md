@@ -25,66 +25,9 @@
 ```
 </br>
 
-#### 8번 메뉴
-``` c
-//8번 메뉴
-case 8:
-  write(1, "Input dest : ", 0xDu);
-  read(0, &s, 0x14u);
-  while ( strcmp((&s1)[4 * v2], &s) )
-  {
-    if ( ++v2 > 7 )
-    {
-      write(1, "Can't find dest\n", 0x10u);
-      return *MK_FP(__GS__, 20) ^ v10;
-    }
-  }
-  if ( v2 <= 3 )
-  {
-    write(1, "You can only use 64-bit registers\n", 0x22u);
-    return *MK_FP(__GS__, 20) ^ v10;
-  }
-  write(1, "Input data : ", 0xDu);
-  __isoc99_scanf("%llu", &v6);
-  sub_80488B6(8 * v2 + 134530304, v6);
-  continue;  
-```
-
 * 8번 메뉴를 통해 rdx에 값을 저장할 수 있다. (그냥 8바이트를 저장할 수 있다.)
-</br>
 
-#### 6번 메뉴
-``` c
-//6번 메뉴
-case 6:
-  write(1, "Input dest : ", 0xDu);
-  read(0, &s, 0x14u);
-  v4 = strtoul(&s, 0, 16);
-  if ( v4 < (unsigned int)&unk_804C0E0 || v4 > (unsigned int)&unk_804C4DC )
-  {
-    write(1, "Out-Of-Bounds!!\n", 0x10u);
-    exit(0);
-  }
-  write(1, "Input source : ", 0xFu);
-  read(0, &s2, 0x14u);
-  while ( strcmp((&s1)[4 * v3], &s2) )
-  {
-    if ( ++v3 > 7 )
-    {
-      write(1, "Can't find source\n", 0x12u);
-      return *MK_FP(__GS__, 20) ^ v10;
-    }
-  }
-  if ( v3 <= 3 )
-  {
-    write(1, "You can only use 64-bit registers\n", 0x22u);
-    return *MK_FP(__GS__, 20) ^ v10;
-  }
-  sub_8048858(v4, &dword_804C500[2 * v3]);
-  continue;
-```
-
-* 여기서 레지스터에 있는 값을 메모리에 저장한다. 리틀엔디안 방식으로 저장이된다.
+* 6번 메뉴에서 레지스터에 있는 값을 메모리에 저장한다. 리틀엔디안 방식으로 저장이된다.
 
 </br>
 
